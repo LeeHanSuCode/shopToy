@@ -1,0 +1,303 @@
+/*기본 css 셋팅*/
+* {
+    box-sizing: border-box;   /*box-sizing 모두 통일*/
+}
+
+body  {
+    margin: 0 auto;       /*좌우 , 위아래  -> body 내용이 페이지 한가운데로 오게끔 설정*/
+    color: #3f464d;     /*글씨 색깔*/
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/*a 태그 디폴트 속성 설정*/
+a {
+    all: unset;   /*밑줄 표시 없앰*/
+}
+
+a:link {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:active {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3f464d;
+    cursor: pointer;
+}
+
+/*header 부분 설정*/
+.inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;                            /*다른 component 위에 있게 하기 위함*/
+}
+
+
+.head-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;           /*수평 정렬 방법*/
+    align-items: center;                      /*수직 정렬 방법*/
+}
+
+
+.head-menu {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.head-logo a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.head-menu div a:hover{
+    color: #2186c4;
+}
+
+/*search(Section)*/
+.search-section{
+    width: 100%;
+    height: 50px;
+    margin-top: 100px;
+}
+
+.search-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.search-select-container{
+    display: flex;
+    height: 50px;
+}
+
+
+/*banner(Section)*/
+.banner {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    height: 600px;
+}
+
+.banner img {
+    width: 100%;
+    height: 600px;
+}
+
+
+
+/*item-title*/
+section {
+    margin-top: 1rem;
+}
+
+.item-container{
+    width: 100%;
+}
+
+.item-title-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.item-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.item-title-main{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.item-title-connect {
+    font-size: 1.5rem;
+}
+
+.item-title-sub{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    color: gray;
+}
+
+.item-more a {
+    text-decoration: underline;
+}
+
+.item-more a:hover {
+    font-weight: lighter;
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: skyblue;
+}
+
+
+/*item-list*/
+.item-list {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.item-card {
+    width: 240px;
+    box-shadow: 10px 10px 10px -5px rgba(25, 42, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem 0;
+    /*margin: 0 20px;*/
+    transition: 0.4s;
+}
+
+
+.item-card:hover {
+    transform: translate(0 , -5px);
+}
+
+.item-image{
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+}
+
+.item-container {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.item-name {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-price {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #822445;
+}
+
+.seller-container{
+    display: flex;
+    font-weight: lighter;
+    margin-top: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+.seller-name {
+    width: 90%;
+}
+
+.buyer-like{
+    width: 10%;
+}
+
+
+
+@media only screen and (min-width: 1200px) {  /*최소 가로 사이즈가 1200일 때 (즉 , 1200이상일 때 적용)*/
+    .inner {
+        max-width: 1200px;
+    }
+}
+
+
+/*980px 이하일 때 적용*/
+@media only screen and (max-width: 980px){
+
+}
+
+
+/*footer*/
+footer {
+    margin-top: 100px;
+    border-top: 1px solid #e4e4e4;
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 200px;
+
+}
+
+.footer-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.customer-service-center div{
+    margin-top: 1rem;
+    font-weight: lighter;
+}
+
+.company div{
+    margin-top: 1rem;
+    font-weight: lighter;
+}
+
+.call-name{
+    font-weight: bold;
+}
+
+.call-number{
+    margin-top: 0;
+    font-size : 2rem;
+    font-weight: bold;
+}
+
+.call-email {
+    font-size: smaller;
+    text-decoration-line: underline;
+}
+
+
+/* ----------------회원 가입 페이지 ------------------------------*/
+form label {
+    font-size: 1.1rem;
+}
+
+
+.agree{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.agree-sub {
+    font-weight: lighter;
+}
